@@ -1,0 +1,339 @@
+
+/* =========================================
+   1. RESET DAN PENGATURAN HALAMAN
+========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #F8DDA5;
+    color: #3D3022;
+}
+
+
+/* =========================================
+   2. NAVBAR UTAMA
+========================================= */
+
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 10px 24px;
+    background-color: #EFAF50;
+}
+
+.navbar .container-fluid {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Nama website */
+.navbar .navbar-brand {
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+/* Menu navbar */
+.navbar .nav-link {
+    color: #FFF9EF !important;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #5C3B16 !important;
+}
+
+.navbar .nav-link.active {
+    color: #5C3B16 !important;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   3. SUSUNAN MENU NAVBAR
+========================================= */
+
+.drawer-body > .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Menu kiri */
+.drawer-body .navbar-nav > .nav-item {
+    flex-shrink: 0;
+}
+
+/* Search berada di tengah */
+.drawer-body .search-item {
+    flex: 0 1 420px;
+    margin-left: auto;
+    min-width: 180px;
+}
+
+/* Menu kanan */
+.drawer-body .right-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-left: 0;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   4. SEARCH BAR
+========================================= */
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.search-form input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 8px 14px;
+
+    background-color: #FFF9EF !important;
+    color: #3D3022 !important;
+
+    border: 1px solid #D99532 !important;
+    border-radius: 8px;
+}
+
+.search-form input[type="search"]::placeholder {
+    color: #806B50 !important;
+    opacity: 1;
+}
+
+.search-form input[type="search"]:focus {
+    outline: none;
+    border-color: #B97820 !important;
+    box-shadow: 0 0 0 3px rgba(217, 149, 50, 0.2);
+}
+
+
+/* =========================================
+   5. TOMBOL SEARCH
+========================================= */
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 40px;
+    flex-shrink: 0;
+
+    background-color: #D99532 !important;
+    color: #FFFFFF !important;
+
+    border: 1px solid #D99532 !important;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+    background-color: #B97820 !important;
+    border-color: #B97820 !important;
+}
+
+
+/* =========================================
+   6. CARD
+========================================= */
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E8C98E;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   7. TOMBOL UTAMA
+========================================= */
+
+.btn-primary {
+    background-color: #D99532;
+    border-color: #D99532;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #B97820;
+    border-color: #B97820;
+}
+
+
+/* =========================================
+   8. RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 10px 16px;
+    }
+
+    .drawer-body > .navbar-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .drawer-body .search-item {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin-left: 0;
+    }
+
+    .drawer-body .right-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-left: 0;
+    }
+
+}
+
+
+/* GRID GAME */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* GAME CARD */
+.game-card {
+    height: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #E8C98E;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-3px);
+}
+
+/* IMAGE */
+.game-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: #F3E5CD;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DISCOUNT */
+.discount-badge {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-color: #D99532;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+/* INFO */
+.game-info {
+    padding: 9px;
+}
+
+.game-platform {
+    color: #806B50;
+    font-size: 10px;
+}
+
+.game-info h5 {
+    color: #3D3022;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+/* PRICE */
+.game-price {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 8px;
+}
+
+.current-price {
+    color: #B97820;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.old-price {
+    color: #999;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+/* BUTTON */
+.buy-button {
+    width: 100%;
+    padding: 6px;
+    background-color: #D99532;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #B97820;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
