@@ -1,8 +1,0 @@
-Memperelemah website untuk demonstrai ada pada 
-app/controler/Authcontroller.php (linecode : 39-49) dan 
-views/Auth/login.php (linecode : 58-59)
-
-sedangkan untuk mitigasi pada penyerangna open redirect
-app/controler/Authcontroller.php (linecode : 26-35) dan 
-views/Auth/login.php (linecode : 52-54)
-
